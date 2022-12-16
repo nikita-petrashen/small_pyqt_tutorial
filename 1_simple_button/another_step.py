@@ -24,6 +24,8 @@ class PopupWidget(QWidget):
         self.set_all_geometry()  # use a separate method to set the geometry for cleaner code
 
     def set_text_and_show(self):  # this will set the label text and show the widget
+        self.hide()  # hide the popup if it's already shown
+        self.setGeometry(780, 400, 300, 80)  # without this the widget drifts upwards when called consecutively
         word = choice(OBSCENE_WORDS)
         self.label.setText(f"кто на меня нажал, тот {word}")
         self.show()
