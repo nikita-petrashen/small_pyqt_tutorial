@@ -8,8 +8,8 @@ This is a small PyQt tutorial I've prepared for my friend to get started with Py
   2. ```clean.py``` is the same hello world app but more cleanly written
 * #### 1_simpe_button:
   1. ```dummy_button.py``` is a small application with a single button that does nothing
-  2. ```button_with_purpose.py``` shows how to make button do something
-  3. ```another_step.py``` makes the button to create a popup window
+  2. ```button_with_purpose.py``` the button now prints a message to the console
+  3. ```another_step.py``` the button now creates a popup window
 * #### 2_layouts:
   1. ```without_layout.py``` is an app with three dummy buttons arranged manually
   2. ```with_layout.py``` shows how to arrange three buttons using a layout
