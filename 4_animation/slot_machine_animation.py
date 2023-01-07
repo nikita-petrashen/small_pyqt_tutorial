@@ -4,7 +4,7 @@ from PyQt6.QtWidgets import QApplication, QMainWindow, QLabel, QWidget, QHBoxLay
 from PyQt6.QtGui import QColor, QPainter, QPen
 from PyQt6.QtCore import QPropertyAnimation, Qt, QParallelAnimationGroup
 from PyQt6.QtCore import pyqtProperty
-""" This code shows how to create a custom animation. """
+""" This code shows how to create a custom slot machine widget. """
 
 
 OBSCENE_WORDS = "Говно, залупа, пенис, хер, давалка, хуй, блядина, \
@@ -49,8 +49,10 @@ class SlotMachineWidget(QWidget):
         self.widgets[3].move(0, 64)
 
         self._offset = 0
+        self.anim_group = None
         self.set_animations()
 
+    # this is a way to draw a rectangle
     def paintEvent(self, event):
         painter = QPainter(self)
         painter.setPen(QPen(QColor("green"), 3))

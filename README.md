@@ -16,3 +16,8 @@ This is a small PyQt tutorial I've prepared for my friend to get started with Py
 * #### 3_styles
   1. ```app_with_style.py``` applies styles to the button app
   2. ```styles.py``` contains style examples
+* #### 4_animation
+  1. ```basic_animation.py``` shows how to create a basic animation
+  2. ```combining_animations.py``` shows how to combine different animation
+  3. ```custom_animations.py``` shows how to create a custom property and animate it
+  4. ```slot_machine_animation.py``` implements an advanced animated widget
