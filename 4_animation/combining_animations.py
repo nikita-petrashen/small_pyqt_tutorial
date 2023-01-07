@@ -1,7 +1,15 @@
 import sys
-from PyQt6.QtWidgets import QApplication, QMainWindow, QWidget
-from PyQt6.QtCore import QPropertyAnimation, QParallelAnimationGroup, QSize, QPoint
+from PyQt6.QtWidgets import QApplication, QMainWindow, QLabel
+from PyQt6.QtCore import QPropertyAnimation, QParallelAnimationGroup, QSize, QPoint, Qt
 """ This code shows how to group different animations together. """
+
+
+class MyLabel(QLabel):
+    def __init__(self, parent=None):
+        super().__init__("<h2>здарова придурки</h2>", parent=parent)
+        self.resize(100, 100)
+        self.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.setStyleSheet("background-color:red;border-radius:15px")
 
 
 class MyMainWindow(QMainWindow):
@@ -9,9 +17,7 @@ class MyMainWindow(QMainWindow):
         super().__init__()
         self.setWindowTitle("анимация")
         self.setGeometry(900, 500, 500, 500)
-        self.widget = QWidget(self)
-        self.widget.resize(100, 100)
-        self.widget.setStyleSheet("background-color:red;border-radius:15px")
+        self.widget = MyLabel(self)
         self.anim = None
         self.set_animations()
 
