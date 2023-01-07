@@ -20,13 +20,16 @@ HIDE_BUTTON_STYLE = """QPushButton {
     border-radius: 3px;
     font: italic;
 }
-MyButton:pressed {
+QPushButton:pressed {
     background-color: violet;
     border-style: inset;
 }
 """
 
-WINDOW_STYLE = """MyMainWindow, PopupWidget{
+WINDOW_STYLE = """
+MyMainWindow { background-color: blue; }
+PopupWidget { background-color: cyan;}
+MyMainWindow, PopupWidget{
     border-style: outset;
     border-width: 2px;
     border-radius: 10px;
@@ -35,6 +38,5 @@ WINDOW_STYLE = """MyMainWindow, PopupWidget{
     min-width: 10em;
     padding: 6px;
 }
-MyMainWindow { background-color: blue; }
-PopupWidget { background-color: cyan;}
+
 """
